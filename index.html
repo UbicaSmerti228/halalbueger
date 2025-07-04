@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Халяль Бургер – Сочно. Сыто. Вкусно.</title>
+    <meta name="description" content="Закажите халяль еду с доставкой. Свежее мясо, авторские соусы и незабываемый вкус.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header" id="header">
+        <div class="container">
+            <a href="#" class="logo">ХАЛЯЛЬ БУРГЕР</a>
+            <nav class="nav-menu">
+                <a href="#menu">Меню</a>
+                <a href="#why-us">Почему мы?</a>
+                <a href="#footer">Контакты</a>
+            </nav>
+            <div class="header-cart-icon" id="cart-icon">
+                <i class="fa-solid fa-shopping-cart"></i>
+                <span id="cart-counter" class="cart-counter">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <h1>ХАЛЯЛЬ БУРГЕР – Сочно. Сыто. Вкусно.</h1>
+                <p>Закажи свою еду уже сейчас!</p>
+                <a href="#menu" class="cta-button">Выбрать еду</a>
+            </div>
+        </section>
+
+        <section class="section" id="menu">
+            <div class="container">
+                <h2 class="section-title">Наше меню</h2>
+                <div class="burgers-grid" id="burgers-grid">
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="why-us" style="background-color: #000;">
+            <div class="container">
+                <h2 class="section-title">Почему мы?</h2>
+                <div class="why-us-grid">
+                    <div class="why-us-item">
+                        <i class="fa-solid fa-check-double"></i>
+                        <h3>100% Халяль</h3>
+                        <p>Мы используем только халяльное мясо и ингредиенты.</p>
+                    </div>
+                    <div class="why-us-item">
+                        <i class="fa-solid fa-seedling"></i>
+                        <h3>Продукты</h3>
+                        <p>Всегда свежие и которые никогда не стоят без дела.</p>
+                    </div>
+                    <div class="why-us-item">
+                        <i class="fa-solid fa-pepper-hot"></i>
+                        <h3>Авторские Соусы</h3>
+                        <p>готовим с любовью для вас из натуральных ингредиентов.</p>
+                    </div>
+                    <div class="why-us-item">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <h3>Быстрая Доставка</h3>
+                        <p>Привезём вашу горячую еду в кратчайшие сроки.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="footer">
+         <div class="container">
+            <div class="footer-about">
+                <a href="#" class="logo">ХАЛЯЛЬ БУРГЕР</a>
+                <p>Сочно. Сыто. Вкусно.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Контакты</h4>
+                <p>Куйбышева 125/1, Верхнеяркеево<br>+7 (917) 777-49-88</p>
+            </div>
+             <div class="footer-social">
+                <h4>Соцсети</h4>
+                 <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Халяль Бургер.</p>
+        </div>
+    </footer>
+
+    <div class="cart-modal-overlay" id="cart-overlay">
+        <div class="cart-modal" id="cart-modal">
+            <div class="cart-header">
+                <h2>Ваша корзина</h2>
+                <button class="close-cart-btn" id="close-cart-btn">&times;</button>
+            </div>
+            <div class="cart-body" id="cart-items-container">
+                <p class="cart-empty-message">Ваша корзина пуста</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-options">
+                    <div class="cart-option-item">
+                        <label for="persons-input">Количество персон:</label>
+                        <input type="number" id="persons-input" value="1" min="1">
+                    </div>
+                    <div class="cart-option-item">
+                        <label for="comment-input">Комментарий к заказу:</label>
+                        <textarea id="comment-input" rows="3" placeholder="Ваши пожелания..."></textarea>
+                    </div>
+                </div>
+                <div class="cart-summary">
+                    <span class="total-price-label">Итого:</span>
+                    <span class="total-price" id="cart-total-price">0 ₽</span>
+                </div>
+                <button class="order-btn" id="whatsapp-order-btn">
+                    <i class="fab fa-whatsapp"></i> Оформить в WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js" defer></script>
+</body>
+</html>
